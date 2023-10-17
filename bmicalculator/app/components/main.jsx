@@ -8,7 +8,7 @@ const Main = () => {
   bg-pure-white gap-y-10 "
     >
       <section className="flex flex-col w-full lg:flex-row ">
-        <div className="flex flex-col items-center text-center rounded-b-[3rem] bg-gradient-to-r from-[#D6E6FE] to-[#D5FAFD] min-h-[40rem]  lg:w-[64rem] lg:h-[46rem]">
+        <div className="flex flex-col items-center text-center rounded-b-[3rem] bg-gradient-to-r from-[#D6E6FE] to-[#D5FAFD] min-h-[40rem]  lg:w-[64rem] lg:h-[46rem] lg:py-20">
           <Image
             src="/images/logo.svg"
             width={40}
