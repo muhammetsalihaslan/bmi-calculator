@@ -1,5 +1,6 @@
 import React from "react";
 import Metric from "./metric";
+import Imperial from "./imperial";
 
 const Calculator = () => {
   return (
@@ -29,7 +30,7 @@ const Calculator = () => {
           </label>
         </div>
       </div>
-      <Metric />
+      <Imperial />
     </div>
   );
 };
