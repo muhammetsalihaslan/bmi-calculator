@@ -7,8 +7,26 @@ const Calculator = () => {
         Enter your details below
       </div>
       <div className="grid grid-cols-2 gap-x-6">
-        <div></div>
-        <div></div>
+        <div className="flex flex-start items-center ml-6">
+          <input
+            type="radio"
+            id="metric-system"
+            className="w-8 h-8 mr-5 appearance-none border rounded-full hover:border-blue-300 hover:cursor-pointer  checked:bg-blue-700 checked:border-8 "
+          />
+          <label htmlFor="metric-system" className="font-semibold">
+            Metric
+          </label>
+        </div>
+        <div className="flex flex-start items-center">
+          <input
+            type="radio"
+            id="imperial-system"
+            className="w-8 h-8 mr-5 appearance-none border rounded-full hover:border-blue-300 hover:cursor-pointer  checked:bg-blue-700 checked:border-8 "
+          />
+          <label htmlFor="imperial-system" className="font-semibold">
+            Imperial
+          </label>
+        </div>
       </div>
     </div>
   );
