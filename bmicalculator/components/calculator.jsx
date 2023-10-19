@@ -1,4 +1,5 @@
 import React from "react";
+import Metric from "./metric";
 
 const Calculator = () => {
   return (
@@ -28,6 +29,7 @@ const Calculator = () => {
           </label>
         </div>
       </div>
+      <Metric />
     </div>
   );
 };
