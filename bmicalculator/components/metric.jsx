@@ -1,6 +1,18 @@
 import React from "react";
+import Input from "./input";
+import Bmidisplay from "./bmidisplay";
+import { useForm, useWatch } from "react-hook-form";
 
 const Metric = () => {
+  const { register, control } = useForm({
+    height: " ",
+    weight: " ",
+  });
+
+  const [height, weight] = useWatch({
+    control,
+    name: ["height", "weight"],
+  }).map(parseFloat);
   return (
     <>
       <form className="grid grid-cols-2 gap-x-6 mt-5">
@@ -11,28 +23,19 @@ const Metric = () => {
           >
             Height
           </label>
-          <input
-            type=""
-            id="height"
-            unit="cm"
-            className="border border-gray-400 h-[4rem] w-48 rounded-xl"
-          />
+          <Input id="height" unit="cm" register={register} />
         </div>
-        <div className="col-span-1 flex flex-col gap-y-2">
+        <div className="col-span-1 flex flex-col gap-y-2 mr-6">
           <label
             htmlFor="weight"
             className="text-[#5E6E85] text-sm font-normal "
           >
             Weight
           </label>
-          <input
-            type=""
-            id="weight"
-            unit="cm"
-            className="border border-gray-400 h-[4rem] w-48 rounded-xl"
-          />
+          <Input id="height" unit="kg" register={register} />
         </div>
       </form>
+      <Bmidisplay />
     </>
   );
 };
