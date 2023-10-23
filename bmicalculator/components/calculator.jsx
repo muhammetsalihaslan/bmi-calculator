@@ -4,7 +4,7 @@ import Imperial from "./imperial";
 
 const Calculator = () => {
   return (
-    <div className="flex flex-col border h-[468px] w-[480px] rounded-xl mx-5 bg-white lg:mt-[10.4rem] lg:-ml-[15%] shadow-xl">
+    <div className="flex flex-col border h-[520px] w-[500px] rounded-xl mx-5 bg-white lg:mt-[10.4rem] lg:-ml-[15%] shadow-xl">
       <div className="text-[#273548] font-semibold text-2xl py-9 px-6 ">
         Enter your details below
       </div>
