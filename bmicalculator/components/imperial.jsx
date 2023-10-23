@@ -1,4 +1,5 @@
 import React from "react";
+import Bmidisplay from "./bmidisplay";
 
 const Imperial = () => {
   return (
@@ -45,6 +46,7 @@ const Imperial = () => {
           />
         </div>
       </form>
+      <Bmidisplay />
     </>
   );
 };
