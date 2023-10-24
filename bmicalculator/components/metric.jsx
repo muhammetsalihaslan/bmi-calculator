@@ -1,9 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Input from "./input";
 import Bmidisplay from "./bmidisplay";
-import { useForm, useWatch } from "react-hook-form";
 
 const Metric = () => {
+  const [height, setHeight] = useState(" ");
+  const [weight, setWeight] = useState(" ");
+
+  const handleHChange = (e) => {
+    setHeight(e.target.value);
+  };
+
+  const handleWChange = (e) => {
+    setWeight(e.target.value);
+  };
   return (
     <>
       <form className="grid grid-cols-2 gap-x-6 mt-5">
@@ -14,7 +24,12 @@ const Metric = () => {
           >
             Height
           </label>
-          <Input id="height" unit="cm" />
+          <Input
+            id="height"
+            unit="cm"
+            value={height}
+            onChange={handleHChange}
+          />
         </div>
         <div className="col-span-1 flex flex-col gap-y-2 mr-6">
           <label
@@ -23,7 +38,12 @@ const Metric = () => {
           >
             Weight
           </label>
-          <Input id="height" unit="kg" />
+          <Input
+            id="height"
+            unit="kg"
+            value={weight}
+            onChange={handleWChange}
+          />
         </div>
       </form>
       <Bmidisplay />
