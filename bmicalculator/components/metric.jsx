@@ -7,12 +7,12 @@ const Metric = () => {
   const [height, setHeight] = useState(" ");
   const [weight, setWeight] = useState(" ");
 
-  const handleChange = (e) => {
-    if (e.target.id === "height") {
-      setHeight(e.target.value);
-    } else {
-      setWeight(e.target.value);
-    }
+  const handleHChange = (e) => {
+    setHeight(e.target.value);
+  };
+
+  const handleWChange = (e) => {
+    setWeight(e.target.value);
   };
 
   return (
@@ -25,7 +25,12 @@ const Metric = () => {
           >
             Height
           </label>
-          <Input id="height" unit="cm" value={height} onChange={handleChange} />
+          <Input
+            id="height"
+            unit="cm"
+            value={height}
+            onChange={handleHChange}
+          />
         </div>
         <div className="col-span-1 flex flex-col gap-y-2 mr-6">
           <label
@@ -34,7 +39,12 @@ const Metric = () => {
           >
             Weight
           </label>
-          <Input id="height" unit="kg" value={weight} onChange={handleChange} />
+          <Input
+            id="height"
+            unit="kg"
+            value={weight}
+            onChange={handleWChange}
+          />
         </div>
       </form>
       <Bmidisplay />
