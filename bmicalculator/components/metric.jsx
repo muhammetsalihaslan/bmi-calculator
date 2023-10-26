@@ -6,13 +6,13 @@ import Bmidisplay from "./bmidisplay";
 const Metric = () => {
   const [height, setHeight] = useState(" ");
   const [weight, setWeight] = useState(" ");
+  const [bmi, setBMI] = useState(null);
 
-  const handleHChange = (e) => {
-    setHeight(e.target.value);
-  };
-
-  const handleWChange = (e) => {
-    setWeight(e.target.value);
+  const calculateBMI = () => {
+    const weightInKg = parseFloat(weight);
+    const heightInM = parseFloat(height) / 100;
+    const calculatedBMI = weightInKg / heightInM ** 2;
+    setBMI(calculatedBMI.toFixed(2));
   };
 
   return (
@@ -29,7 +29,7 @@ const Metric = () => {
             id="height"
             unit="cm"
             value={height}
-            onChange={handleHChange}
+            onChange={(e) => setHeight(e.target.value)}
           />
         </div>
         <div className="col-span-1 flex flex-col gap-y-2 mr-6">
@@ -43,7 +43,7 @@ const Metric = () => {
             id="height"
             unit="kg"
             value={weight}
-            onChange={handleWChange}
+            onChange={(e) => setWeight(e.target.value)}
           />
         </div>
       </form>
