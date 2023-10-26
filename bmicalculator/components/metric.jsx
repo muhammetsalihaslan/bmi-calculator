@@ -1,19 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "./input";
 import Bmidisplay from "./bmidisplay";
 
 const Metric = () => {
   const [height, setHeight] = useState(" ");
   const [weight, setWeight] = useState(" ");
-  const [bmi, setBMI] = useState(null);
+  const [bmi, setBmi] = useState("");
 
-  const calculateBMI = () => {
-    const weightInKg = parseFloat(weight);
-    const heightInM = parseFloat(height) / 100;
-    const calculatedBMI = weightInKg / heightInM ** 2;
-    setBMI(calculatedBMI.toFixed(2));
-  };
+  useEffect(() => {
+    if (weight !== 0 && height !== 0) {
+      const weightInKg = parseFloat(weight);
+      const heightInM = parseFloat(height) / 100;
+      const calculatedBMI = weightInKg / heightInM ** 2;
+      setBmi(calculatedBMI.toFixed(2));
+    }
+  }, [weight, height]);
 
   return (
     <>
@@ -47,7 +49,7 @@ const Metric = () => {
           />
         </div>
       </form>
-      <Bmidisplay />
+      <Bmidisplay bmi={bmi} />
     </>
   );
 };
