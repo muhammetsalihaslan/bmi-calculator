@@ -24,16 +24,18 @@ const Bmidisplay = ({ bmi }) => {
       </div>
     );
   } else {
-    <div>
-      <div className="flex flex-col justify-center bg-blue-500 text-white gap-y-6 mt-6 ms-6 w-[440px] h-[150px] rounded-l-2xl rounded-r-full mb-6 ">
-        <div className="text-2xl font-semibold ms-2">Your BMI İS</div>
-        <h4>{bmi}</h4>
-        <div className=" ms-2">
-          Your BMI suggests you're a {healthStatus}. Your ideal weight is
-          between
+    return (
+      <div>
+        <div className="flex flex-col justify-center bg-blue-500 text-white gap-y-6 mt-6 ms-6 w-[440px] h-[150px] rounded-l-2xl rounded-r-full mb-6 ">
+          <div className="text-2xl font-semibold ms-2">Your BMI İS</div>
+          <h4>{bmi}</h4>
+          <div className=" ms-2">
+            Your BMI suggests you're a {healthStatus}. Your ideal weight is
+            between
+          </div>
         </div>
       </div>
-    </div>;
+    );
   }
 };
 
