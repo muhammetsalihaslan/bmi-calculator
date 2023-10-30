@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
 import Bmidisplay from "./bmidisplay";
 import Input from "./input";
 
 const Imperial = () => {
+  const [ftHeight, setFtHeight] = useState(" ");
+  const [inWeight, setInWeight] = useState(" ");
+  const [stWeight, setStWeight] = useState(" ");
+  const [ibsWeight, setIbsWeight] = useState(" ");
+  const [bmi, setBmi] = useState("");
+
   return (
     <>
       <form className="flex flex-col gap-6 mt-6">
@@ -13,8 +20,18 @@ const Imperial = () => {
           >
             Height
           </label>
-          <Input id="heightft" unit="ft" />
-          <Input id="heightft" unit="in" />
+          <Input
+            id="ftHeight"
+            value={ftHeight}
+            unit="ft"
+            onChange={(e) => setFtHeight(e.target.value)}
+          />
+          <Input
+            id="inHeight"
+            value={inWeight}
+            unit="in"
+            onChange={(e) => setInWeight(e.target.value)}
+          />
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-2 ms-6 mr-6">
           <label
@@ -23,8 +40,18 @@ const Imperial = () => {
           >
             Weight
           </label>
-          <Input id="weightft" unit="st" />
-          <Input id="weightft" unit="lbs" />
+          <Input
+            id="stWeight"
+            value={stWeight}
+            onChange={(e) => setStWeight(e.target.value)}
+            unit="st"
+          />
+          <Input
+            id="ibsWeight"
+            value={ibsWeight}
+            onChange={(e) => setIbsWeight(e.target.value)}
+            unit="lbs"
+          />
         </div>
       </form>
       <Bmidisplay />
