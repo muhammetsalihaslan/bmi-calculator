@@ -1,6 +1,6 @@
 import React from "react";
 
-const Bmidisplay = ({ bmi }) => {
+const Bmidisplay = ({ bmi, idealWeight }) => {
   let healthStatus = "";
   if (+bmi < 18.5) {
     healthStatus = "Underweight";
@@ -26,12 +26,13 @@ const Bmidisplay = ({ bmi }) => {
   } else {
     return (
       <div>
-        <div className="flex flex-col justify-center bg-blue-500 text-white gap-y-6 mt-6 ms-6 w-[440px] h-[150px] rounded-l-2xl rounded-r-full mb-6 ">
-          <div className="text-2xl font-semibold ms-2">Your BMI İS</div>
-          <h4>{bmi}</h4>
-          <div className=" ms-2">
-            Your BMI suggests you're a {healthStatus}. Your ideal weight is
-            between
+        <div className="grid grid-cols-2 item-center gap-x-6 p-8 bg-blue-500 text-white mt-6 ms-6 w-[440px] h-[150px] rounded-l-2xl rounded-r-full mb-6 ">
+          <div className="flex flex-col gap-y-6">
+            <div className="text-m font-semibold">Your BMİ is...</div>
+            <div className="text-5xl font-bold">{bmi}</div>
+          </div>
+          <div className="text-body-s">
+            Your BMI suggests you're {healthStatus} your ideal weight is between
           </div>
         </div>
       </div>

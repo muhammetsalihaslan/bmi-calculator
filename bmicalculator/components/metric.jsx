@@ -7,6 +7,7 @@ const Metric = () => {
   const [height, setHeight] = useState(" ");
   const [weight, setWeight] = useState(" ");
   const [bmi, setBmi] = useState("");
+  const [idealweight, setIdealWeight] = useState(0);
 
   useEffect(() => {
     if (weight !== 0 && height !== 0) {
@@ -14,6 +15,7 @@ const Metric = () => {
       const heightInM = parseFloat(height) / 100;
       const calculatedBMI = weightInKg / heightInM ** 2;
       setBmi(calculatedBMI.toFixed(2));
+      setIdealWeight(height - 100);
     }
   }, [weight, height]);
 
@@ -49,7 +51,7 @@ const Metric = () => {
           />
         </div>
       </form>
-      <Bmidisplay bmi={bmi} />
+      <Bmidisplay bmi={bmi} idealweight={idealweight} />
     </>
   );
 };
