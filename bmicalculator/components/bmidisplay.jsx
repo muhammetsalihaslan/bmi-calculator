@@ -32,7 +32,8 @@ const Bmidisplay = ({ bmi, idealWeight }) => {
             <div className="text-5xl font-bold">{bmi}</div>
           </div>
           <div className="text-body-s">
-            Your BMI suggests you're {healthStatus} your ideal weight is between
+            Your BMI suggests you're {healthStatus}
+            <span></span>
           </div>
         </div>
       </div>

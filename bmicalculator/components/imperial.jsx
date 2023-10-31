@@ -1,14 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Bmidisplay from "./bmidisplay";
 import Input from "./input";
 
 const Imperial = () => {
-  const [ftHeight, setFtHeight] = useState(" ");
-  const [inWeight, setInWeight] = useState(" ");
-  const [stWeight, setStWeight] = useState(" ");
-  const [ibsWeight, setIbsWeight] = useState(" ");
+  const [ftHeight, setFtHeight] = useState("");
+  const [inHeight, setInHeight] = useState("");
+  const [stWeight, setStWeight] = useState("");
+  const [ibsWeight, setIbsWeight] = useState("");
   const [bmi, setBmi] = useState("");
+
+  const IbsforSt = 14;
+  const InforFt = 12;
+
+  useEffect(() => {
+    if (ftHeight !== 0 && inHeight !== 0 && stWeight !== 0 && ibsWeight !== 0) {
+      const height = ftHeight * InforFt + inHeight;
+      const weight = stWeight * IbsforSt + ibsWeight;
+      const CalculatedBmi = ((weight / (height * height)) * 703).toFixed(1);
+      setBmi(CalculatedBmi);
+    }
+  }, [ftHeight, inHeight, stWeight, ibsWeight]);
 
   return (
     <>
@@ -28,9 +40,9 @@ const Imperial = () => {
           />
           <Input
             id="inHeight"
-            value={inWeight}
+            value={inHeight}
             unit="in"
-            onChange={(e) => setInWeight(e.target.value)}
+            onChange={(e) => setInHeight(e.target.value)}
           />
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-2 ms-6 mr-6">
@@ -54,7 +66,7 @@ const Imperial = () => {
           />
         </div>
       </form>
-      <Bmidisplay />
+      <Bmidisplay bmi={bmi} />
     </>
   );
 };
