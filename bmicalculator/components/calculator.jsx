@@ -13,7 +13,7 @@ const Calculator = () => {
   const showMetricOrImperial = unit === "metric" ? <Metric /> : <Imperial />;
 
   return (
-    <div className="flex flex-col border lg:h-fit w-[500px] rounded-xl mx-5 bg-white lg:mt-[10.4rem] lg:-ml-[15%] shadow-xl">
+    <div className="flex flex-col border rounded-xl mx-5 bg-white  shadow-xl h-fit -mt-[45%]  md:-mt-[35%] lg:mt-[10.4rem] lg:-ml-[30%] xl:-ml-[15%]">
       <div className="text-[#273548] font-semibold text-2xl py-9 px-6 ">
         Enter your details below
       </div>
