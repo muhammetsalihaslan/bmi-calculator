@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Calculator from "./calculator";
+import Card from "./card";
 
 const Main = () => {
   return (
@@ -30,7 +31,7 @@ const Main = () => {
         </div>
         <Calculator />
       </section>
-      <section>
+      <section className="md:mx-10 lg:mx-[10rem]">
         <div className="flex flex-col justify-around md:flex-row md:gap-x-[3rem] lg:max-w-7xl bg-gradient-to-r from-[#ffffff] to-[#f7f8f8] mt-5 gap-[5rem] lg:gap-[7rem] ">
           <Image
             src="/images/image-man-eating.webp"
@@ -58,6 +59,20 @@ const Main = () => {
               daily for five days a week.
             </div>
           </div>
+        </div>
+        <div className="grid lg:grid-cols-3 gap-y-10 my-10">
+          <Card icon="/images/icon-eating.svg" title="Healthy eating">
+            Healthy eating promotes weight control, disease prevention, better
+            digestion, immunity, mental clarity, and mood.
+          </Card>
+          <Card icon="/images/icon-exercise.svg" title="Regular exercise">
+            Exercise improves fitness, aids weight control, elevates mood, and
+            reduces disease risk, fostering wellness and longevity.
+          </Card>
+          <Card icon="/images/icon-sleep.svg" title="Adequate sleep">
+            Sleep enhances mental clarity, emotional stability, and physical
+            wellness, promoting overall restoration and rejuvenation.
+          </Card>
         </div>
       </section>
     </main>
