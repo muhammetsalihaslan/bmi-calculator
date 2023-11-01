@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React, { Children } from "react";
 
-const Smallcard = ({ icon, title, children }) => {
+const Smallcard = ({ icon, title, children, className }) => {
   return (
-    <div className="bg-white p-6 mt-4 gap-x-5 mx-3 rounded-2xl shadow-xl">
+    <div
+      className={`bg-white p-6 mt-4 gap-x-5 mx-3 rounded-2xl shadow-xl lg:flex-col ${className}`}
+    >
       <div className="flex">
         <Image src={icon} width={30} height={30} />
         <h1 className="text-2xl mt-1 mx-2 font-semibold text-[#253347] ">
