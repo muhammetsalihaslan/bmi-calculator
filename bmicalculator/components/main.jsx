@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Calculator from "./calculator";
 import Card from "./card";
+import Smallcard from "./smallcard";
 
 const Main = () => {
   return (
@@ -75,19 +76,53 @@ const Main = () => {
           </Card>
         </div>
       </section>
-      <section className="flex flex-col">
-        <div className="flex flex-col text-center gap-y-6">
-          <h1 className="text-4xl font-semibold text-[#253347]">
-            Limitation of BMI
-          </h1>
-          <p className="text-[#5E6E8C]">
-            Although BMI is often a practical indicator of healthy weight, it is
-            not suited for every person. Specific groups should carefully
-            consider their BMI outcomes, and in certain cases, the measurement
-            may not be beneficial to use.
-          </p>
+      <section className="flex flex-col lg:max-w-7xl mx-6">
+        <div className="flex flex-col text-center gap-y-6 lg:grid lg:grid-cols-2 lg:gap-x-[8.75rem]">
+          <div className="flex flex-col gap-y-6 text-start ">
+            <h1 className="text-4xl font-semibold text-[#253347] lg:text-6xl lg:mx-6">
+              Limitation of BMI
+            </h1>
+            <p className="text-[#5E6E8C] lg:mx-6">
+              Although BMI is often a practical indicator of healthy weight, it
+              is not suited for every person. Specific groups should carefully
+              consider their BMI outcomes, and in certain cases, the measurement
+              may not be beneficial to use.
+            </p>
+            <Image
+              src="/images/pattern-curved-line-right.svg"
+              width={94}
+              height={122}
+              className="hidden place-self-start lg:flex lg:self-center"
+            />
+          </div>
         </div>
-        <div></div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 lg:gap-10 md:mt-[2rem] lg:-mt-[18rem]">
+          <Smallcard icon="/images/icon-gender.svg" title="Gender">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </Smallcard>
+          <Smallcard icon="/images/icon-age.svg" title="Age">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </Smallcard>
+          <Smallcard icon="/images/icon-muscle.svg" title="Muscle">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </Smallcard>
+          <Smallcard icon="/images/icon-pregnancy.svg" title="Pregnancy">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </Smallcard>
+          <Smallcard icon="/images/icon-race.svg" title="Race">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </Smallcard>
+        </div>
       </section>
     </main>
   );
