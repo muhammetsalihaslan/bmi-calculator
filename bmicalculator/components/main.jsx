@@ -75,6 +75,20 @@ const Main = () => {
           </Card>
         </div>
       </section>
+      <section className="flex flex-col">
+        <div className="flex flex-col text-center gap-y-6">
+          <h1 className="text-4xl font-semibold text-[#253347]">
+            Limitation of BMI
+          </h1>
+          <p className="text-[#5E6E8C]">
+            Although BMI is often a practical indicator of healthy weight, it is
+            not suited for every person. Specific groups should carefully
+            consider their BMI outcomes, and in certain cases, the measurement
+            may not be beneficial to use.
+          </p>
+        </div>
+        <div></div>
+      </section>
     </main>
   );
 };
