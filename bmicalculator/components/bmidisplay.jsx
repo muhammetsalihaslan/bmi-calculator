@@ -15,7 +15,7 @@ const Bmidisplay = ({ bmi, idealWeight }) => {
   if (bmi === "NaN" || +bmi < 1 || +bmi > 100) {
     return (
       <div>
-        <div className="flex flex-col justify-center bg-blue-500 text-white gap-y-6 mt-6 ms-6  h-[150px] rounded-l-2xl rounded-r-full w-fit ">
+        <div className="flex flex-col justify-center bg-blue-500 text-white gap-x-6 gap-y-6 mt-6 ms-6  mb-6 me-6 h-[150px] rounded-l-2xl rounded-r-full  ">
           <div className="text-2xl font-semibold ms-2">Welcome</div>
           <div className=" ms-2">
             Enter your height and weight and you`ll see your BMI bmi here
