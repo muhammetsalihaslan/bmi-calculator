@@ -1,6 +1,6 @@
 import React from "react";
 
-const Bmidisplay = ({ bmi, idealWeight }) => {
+const Bmidisplay = ({ bmi }) => {
   let healthStatus = "";
   if (+bmi < 18.5) {
     healthStatus = "Underweight";

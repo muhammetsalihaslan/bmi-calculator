@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { Children } from "react";
+import React from "react";
 
 const Smallcard = ({ icon, title, children, className }) => {
   return (
