@@ -96,11 +96,11 @@ const Main = () => {
             />
           </div>
         </div>
-        <div className="grid gap-y-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 md:mt-[2rem] lg:-mt-[20rem] ">
+        <div className="grid gap-y-5 md:grid-cols-2 lg:grid-cols-5 lg:gap-10 md:mt-[2rem] lg:-mt-[20rem] ">
           <Smallcard
             icon="/images/icon-gender.svg"
             title="Gender"
-            className="lg:col-start-3 lg:-ml-[5rem]"
+            className="lg:col-start-4 lg:-mr-[10rem]"
           >
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
@@ -109,13 +109,17 @@ const Main = () => {
           <Smallcard
             icon="/images/icon-age.svg"
             title="Age"
-            className="lg:col-start-2 "
+            className="lg:col-start-3 lg:-mr-[7rem]"
           >
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
           </Smallcard>
-          <Smallcard icon="/images/icon-muscle.svg" title="Muscle" className="">
+          <Smallcard
+            icon="/images/icon-muscle.svg"
+            title="Muscle"
+            className="lg:col-start-5 lg:-ml-[7rem]"
+          >
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
@@ -123,13 +127,17 @@ const Main = () => {
           <Smallcard
             icon="/images/icon-pregnancy.svg"
             title="Pregnancy"
-            className="lg:col-start-1 lg:-mr-[5rem]"
+            className="lg:col-start-2 lg:-mr-[7rem]"
           >
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
           </Smallcard>
-          <Smallcard icon="/images/icon-race.svg" title="Race" className="">
+          <Smallcard
+            icon="/images/icon-race.svg"
+            title="Race"
+            className="lg:col-start-4 lg:-ml-[7rem]"
+          >
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
